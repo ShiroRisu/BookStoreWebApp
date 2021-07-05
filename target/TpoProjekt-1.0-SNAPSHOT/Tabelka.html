@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Księgarnia</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .bg-image-l {
+            background-image: url("libr.jpg");
+            filter: brightness(150%);
+            -webkit-filter: brightness(150%);
+            opacity: 0.1;
+            height: 170%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bg-text-l {
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0, 0);
+            color: black;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: relative;
+            top: -110%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+        .bg-image-d {
+            background-image: url("libr.jpg");
+            filter: brightness(30%);
+            -webkit-filter: brightness(30%);
+            height: 170%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .bg-text-d {
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: relative;
+            top: -110%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<!--
+<button onclick="myFunction()">Kolor</button>
+-->
+<div class="bg-image-l"></div>
+<div class="bg-text-l">
+<h2>Księgarnia:</h2>
+<form method="post">
+    <select name="order" id="order">
+        <option value=" ">kolumna</option>
+        <option value="isbn">ISBN</option>
+        <option value="tytul">TYTUL</option>
+        <option value="autorname">AUTOR</option>
+        <option value="wydawcaname">WYDAWCA</option>
+        <option value="cena">CENA</option>
+    </select>
+    <select name="incDec" id="incDec">
+        <option value=" ">kolejność</option>
+        <option value="ASC">ROSNĄCO</option>
+        <option value="DESC">MALEJĄCO</option>
+    </select>
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("bg-image-d");
+            element.classList.toggle("bg-text-d");
+        }
+    </script>
+
+    <br>
+    <table border="1">
+        <tr>
+            <td>ISBN</td>
+            <td style="column-width:400px">TYTUL</td>
+            <td>AUTOR</td>
+            <td>WYDAWCA</td>
+            <td>CENA</td>
+        </tr>

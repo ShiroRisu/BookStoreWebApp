@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Księgarnia</title>
+    <style>
+        body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="myFunction()">Kolor</button>
+<h2>Księgarnia:</h2>
+<form method="post">
+    <select name="order" id="order">
+        <option value=" ">kolumna</option>
+        <option value="isbn">ISBN</option>
+        <option value="tytul">TYTUL</option>
+        <option value="autorname">AUTOR</option>
+        <option value="wydawcaname">WYDAWCA</option>
+        <option value="cena">CENA</option>
+    </select>
+    <select name="incDec" id="incDec">
+        <option value=" ">kolejność</option>
+        <option value="ASC">ROSNĄCO</option>
+        <option value="DESC">MALEJĄCO</option>
+    </select>
+
+
+
+    <script>
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+
+
+    <br>
+    <table border="1">
+        <tr>
+            <td>ISBN</td>
+            <td style="column-width:400px">TYTUL</td>
+            <td>AUTOR</td>
+            <td>WYDAWCA</td>
+            <td>CENA</td>
+        </tr>
